@@ -42,7 +42,7 @@ const handleButtonClick = (value) => {
 </script>
 
 <template>
-  <h1>Bonjour La team</h1>
+  <h1>Bonjour La tea</h1>
   <div class="calculator">
     <div class="ecran">
       <Ecran :leftOperator="leftOperator" :operation="operation" :rightOperator="rightOperator" :result="result" />
