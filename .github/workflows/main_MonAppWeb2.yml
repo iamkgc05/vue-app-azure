@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v3
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_37d89fbbeab54b8b88a6e7bba26efb7b }}/mfking/carlos:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_37d89fbbeab54b8b88a6e7bba26efb7b }}/carlos:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'MonAppWeb2'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_498c68861fcf4af48a05572c73124502 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_37d89fbbeab54b8b88a6e7bba26efb7b }}/mfking/carlos:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_37d89fbbeab54b8b88a6e7bba26efb7b }}/carlos:${{ github.sha }}'
